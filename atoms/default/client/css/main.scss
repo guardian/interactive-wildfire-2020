@@ -1,11 +1,74 @@
 @import "fonts";
 @import "mq";
 @import "palette";
-// @import "enhancer";
+@import "enhancer";
 @import "header";
 @import "remove-dark-mode";
+
+$text-main: #f6f6f6;
 
 .interactive-atom {
     margin: 0;
     padding: 0;
 }
+
+.content--interactive {
+    .content__headline, .content__standfirst, h2, p {
+        color: #f6f6f6;
+    }
+}
+
+.content__label__link, .byline {
+    color: $news-bright !important; 
+    a {
+        color: $news-bright !important;
+    }
+}
+
+.content__meta-container,
+.article__header .meta {
+  .byline,
+  .meta__byline {
+    color: $news-bright !important;
+
+    a {
+      color: $news-bright;
+    }
+  }
+  .content__dateline,
+  .meta__published {
+    color: $text-main;
+
+    @include mq(mobileMedium) {
+      font-size: 14px;
+    }
+    @include mq(leftCol) {
+      &:after {
+        content: '';
+        opacity: 0.25;
+      }
+    }
+    .alerts,
+    .alerts__label {
+      color: $text-main;
+    }
+
+  }
+  .meta__extras {
+    .social__action {
+      border: none;
+    }
+    .inline-icon {
+      border-color: rgba($text-main,0.25);
+      &:hover {
+        background-color: transparent;
+        border-color: $text-main;
+      }
+    }
+    svg path {
+      fill: $text-main;
+    }
+  }
+
+}
+

@@ -1,3 +1,18 @@
+
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="main.css" />
+ 
+        </style>
+    </head>
+    <body class="interactive interactive-atom app android">
+        <div class="interactive-wrapper">HTML</div>
+        
+            <script>
+
 /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
@@ -81,34 +96,54 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 0);
+/******/ 	return __webpack_require__(__webpack_require__.s = 1);
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ "./atoms/default/client/js/app.js":
-/*!****************************************!*\
-  !*** ./atoms/default/client/js/app.js ***!
-  \****************************************/
+/***/ "./atoms/default/client/js/main.js":
+/*!*****************************************!*\
+  !*** ./atoms/default/client/js/main.js ***!
+  \*****************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-// if you want to import a module from shared/js then you can
-// just do e.g. import Scatter from "shared/js/scatter.js"
+var el = document.createElement('script');
+el.src = './app.js';
+document.body.appendChild(el);
+setTimeout(function () {
+  if (window.resize) {
+    var html = document.querySelector('html');
+    var body = document.querySelector('body');
+    html.style.overflow = 'hidden';
+    html.style.margin = '0px';
+    html.style.padding = '0px';
+    body.style.overflow = 'hidden';
+    body.style.margin = '0px';
+    body.style.padding = '0px';
+    window.resize();
+  }
+}, 100);
 
 /***/ }),
 
-/***/ 0:
-/*!**********************************************!*\
-  !*** multi ./atoms/default/client/js/app.js ***!
-  \**********************************************/
+/***/ 1:
+/*!***********************************************!*\
+  !*** multi ./atoms/default/client/js/main.js ***!
+  \***********************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Users/frank_hulley-jones/repos/interactives/news/interactive-wildfire-2020/atoms/default/client/js/app.js */"./atoms/default/client/js/app.js");
+module.exports = __webpack_require__(/*! /Users/frank_hulley-jones/repos/interactives/news/interactive-wildfire-2020/atoms/default/client/js/main.js */"./atoms/default/client/js/main.js");
 
 
 /***/ })
 
 /******/ });
-//# sourceMappingURL=app.js.map
+//# sourceMappingURL=main.js.map
+
+            </script>
+        
+    </body>
+</html>
+
