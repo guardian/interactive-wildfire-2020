@@ -17,7 +17,7 @@ background-color: #0b0b0b;
   &::before {
     content: "";
     display: block;
-    background-image: url("<%= path %>/header-image.png");
+    background-image: url("<%= path %>/animation-optimize.gif");
     background-repeat: no-repeat;
     background-size: contain;
     background-position: left 0px bottom 0px;
